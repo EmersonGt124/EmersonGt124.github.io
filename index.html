@@ -4,314 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NovaTech Software • Portafolio de EmersonGt124</title>
+  <meta name="description" content="Portafolio oficial de NovaTech Software (EmersonGt124). Aplicaciones móviles Android, herramientas de escritorio y desarrollo web.">
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7755829496735694"
        crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-base: #0B0E14;
-      --bg-surface: #151A23;
-      --bg-card: #1D2330;
-      --primary: #6C5CE7;
-      --primary-light: #8B78FF;
-      --accent: #00D2D3;
-      --accent-green: #00B894;
-      --text-main: #FFFFFF;
-      --text-muted: #9BA4B5;
-      --border: rgba(255, 255, 255, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    body {
-      background-color: var(--bg-base);
-      color: var(--text-main);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* Navegación */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(12px);
-      background: rgba(11, 14, 20, 0.85);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 24px;
-    }
-
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: var(--text-main);
-      text-decoration: none;
-    }
-
-    .brand span.badge {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      padding: 4px 10px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-    }
-
-    nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--text-main);
-    }
-
-    /* Hero Section */
-    .hero {
-      max-width: 1100px;
-      margin: 60px auto 40px auto;
-      padding: 0 24px;
-      text-align: center;
-    }
-
-    .hero-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(108, 92, 231, 0.15);
-      border: 1px solid rgba(108, 92, 231, 0.4);
-      color: var(--primary-light);
-      padding: 6px 14px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -1px;
-      margin-bottom: 20px;
-      background: linear-gradient(135deg, #FFFFFF 60%, var(--text-muted));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 650px;
-      margin: 0 auto 30px auto;
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary), #4834D4);
-      color: white;
-      box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(108, 92, 231, 0.6);
-    }
-
-    .btn-secondary {
-      background: var(--bg-card);
-      color: var(--text-main);
-      border: 1px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-      transform: translateY(-2px);
-    }
-
-    /* Sección Proyectos */
-    .section-title {
-      max-width: 1100px;
-      margin: 80px auto 30px auto;
-      padding: 0 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-
-    .section-title h2 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-
-    .section-title p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .projects-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card:hover {
-      border-color: rgba(108, 92, 231, 0.5);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .card-badge {
-      display: inline-block;
-      align-self: flex-start;
-      background: rgba(0, 184, 148, 0.15);
-      color: var(--accent-green);
-      font-size: 0.75rem;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 6px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .card h3 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .card p.desc {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-    }
-
-    .card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 22px;
-    }
-
-    .tag {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-
-    /* Política de Privacidad */
-    .privacy-box {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 32px 24px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-    }
-
-    .privacy-box h2 {
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-    }
-
-    .privacy-box h3 {
-      font-size: 1.1rem;
-      margin-top: 18px;
-      margin-bottom: 6px;
-      color: var(--primary-light);
-    }
-
-    .privacy-box p, .privacy-box li {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    .privacy-box ul {
-      padding-left: 20px;
-      margin: 8px 0;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    footer a {
-      color: var(--primary-light);
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -319,130 +19,56 @@
   <header>
     <div class="nav-container">
       <a href="#" class="brand">
-        <span class="badge">⚡ NOVATECH</span>
-        <span>Software</span>
+        <span class="badge" id="brand-badge">⚡ NOVATECH</span>
+        <span id="brand-title">Software</span>
       </a>
       <nav>
         <a href="#proyectos">Aplicaciones</a>
         <a href="#privacidad">Privacidad</a>
-        <a href="https://github.com/EmersonGt124" target="_blank">GitHub</a>
+        <a id="nav-github" href="https://github.com/EmersonGt124" target="_blank">GitHub</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-chip">🚀 Desarrollador Móvil & Soluciones Digitales</div>
-    <h1>Creando utilidades móviles y experiencias de alta calidad</h1>
-    <p>Desarrollo independiente de aplicaciones Android y software de escritorio, enfocado en rendimiento, diseño moderno y herramientas que solucionan necesidades del día a día.</p>
+    <div class="hero-chip" id="hero-chip"></div>
+    <h1 id="hero-title"></h1>
+    <p id="hero-desc"></p>
     <div class="btn-group">
       <a href="#proyectos" class="btn btn-primary">Ver Aplicaciones</a>
-      <a href="https://github.com/EmersonGt124" target="_blank" class="btn btn-secondary">Perfil de GitHub</a>
+      <a id="hero-github" href="https://github.com/EmersonGt124" target="_blank" class="btn btn-secondary">Perfil de GitHub</a>
     </div>
   </section>
 
-  <!-- Sección de Aplicaciones -->
+  <!-- Sección de Aplicaciones y Proyectos -->
   <section id="proyectos">
-    <div class="section-title">
+    <div class="section-header">
       <div>
         <h2>Aplicaciones & Software</h2>
-        <p>Proyectos activos para Android y Escritorio</p>
+        <p>Proyectos activos para Android, Escritorio y Web</p>
+      </div>
+      <div class="filter-pills">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="mobile">Móvil / Android</button>
+        <button class="filter-btn" data-filter="desktop">Escritorio PC</button>
+        <button class="filter-btn" data-filter="dev">En Desarrollo</button>
       </div>
     </div>
 
-    <div class="projects-grid">
-      <!-- Media Downloader Pro Android -->
-      <div class="card">
-        <div>
-          <span class="card-badge">Android • v1.0</span>
-          <h3>Media Downloader Pro (Móvil)</h3>
-          <p class="desc">
-            Suite multimedia universal para Android. Permite guardar contenido en alta definición (1080p / 4K) y extraer audio original en MP3 a 320 kbps de TikTok (sin marca de agua), Instagram Reels, Twitter/X, SoundCloud y más de 1000 sitios web.
-          </p>
-          <div class="card-tags">
-            <span class="tag">Flutter</span>
-            <span class="tag">Android</span>
-            <span class="tag">AdMob</span>
-            <span class="tag">Multi-thread</span>
-            <span class="tag">SQLite</span>
-          </div>
-        </div>
-        <div>
-          <a href="#privacidad" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem;">Política de Privacidad</a>
-        </div>
-      </div>
-
-      <!-- Media Downloader Pro Desktop -->
-      <div class="card">
-        <div>
-          <span class="card-badge" style="background: rgba(0, 210, 211, 0.15); color: var(--accent);">PC Desktop • Open Source</span>
-          <h3>Media Downloader Pro (PC)</h3>
-          <p class="desc">
-            La suite de escritorio definitiva para YouTube, TikTok, Instagram, Twitter/X, SoundCloud y +1000 sitios. Con recorte de fragmentos, descargas paralelas, buscador integrado y conversión real a MP3 a 320 kbps.
-          </p>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">yt-dlp</span>
-            <span class="tag">Windows / Linux</span>
-            <span class="tag">FFmpeg</span>
-          </div>
-        </div>
-        <div>
-          <a href="/Media_Video_Downloader_V1.0/" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.85rem;">Ir a Versión Desktop</a>
-        </div>
-      </div>
-
-      <!-- Próximos Proyectos -->
-      <div class="card" style="opacity: 0.85;">
-        <div>
-          <span class="card-badge" style="background: rgba(108, 92, 231, 0.2); color: var(--primary-light);">En Desarrollo</span>
-          <h3>Game & Tools Studio</h3>
-          <p class="desc">
-            Colección de videojuegos ligeros y utilidades de productividad actualmente en fase de prototipado y pruebas para dispositivos móviles.
-          </p>
-          <div class="card-tags">
-            <span class="tag">Mobile Games</span>
-            <span class="tag">Productividad</span>
-            <span class="tag">Dart / Flutter</span>
-          </div>
-        </div>
-        <div>
-          <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Próximamente en Google Play</span>
-        </div>
-      </div>
-    </div>
+    <div class="projects-grid" id="projects-grid"></div>
   </section>
 
-  <!-- Política de Privacidad (OBLIGATORIA PARA GOOGLE PLAY) -->
-  <section id="privacidad" style="max-width: 1100px; margin: 0 auto; padding: 0 24px;">
-    <div class="privacy-box">
-      <h2>Política de Privacidad de Media Downloader Pro</h2>
-      <p><em>Última actualización: Noviembre 2026</em></p>
-      
-      <h3>1. Información General</h3>
-      <p>Esta Política de Privacidad describe cómo se recopila, utiliza y protege la información en la aplicación <strong>Media Downloader Pro</strong>, desarrollada por <strong>NovaTech Software / EmersonGt124</strong>. Nos comprometemos a garantizar la total confidencialidad y privacidad de nuestros usuarios.</p>
-
-      <h3>2. Recopilación de Datos Personales</h3>
-      <p>Media Downloader Pro <strong>NO</strong> recopila, almacena ni comparte ningún tipo de información personal identificable (como nombres, correos electrónicos, números de teléfono o contraseñas). La aplicación funciona localmente en el dispositivo del usuario.</p>
-
-      <h3>3. Permisos del Dispositivo</h3>
-      <ul>
-        <li><strong>Almacenamiento y Archivos Multimedia:</strong> Se utiliza estrictamente para guardar los videos y canciones descargados en la carpeta local de Descargas de tu dispositivo. No accedemos a tus fotos personales ni archivos privados.</li>
-        <li><strong>Conexión a Internet:</strong> Requerida para comunicarse con los servidores de descarga y consultar los enlaces solicitados por el usuario.</li>
-      </ul>
-
-      <h3>4. Servicios de Terceros y Publicidad</h3>
-      <p>La aplicación utiliza <strong>Google AdMob</strong> para mostrar anuncios publicitarios y ofrecer recompensas (Modo Turbo). Google AdMob puede recopilar identificadores anónimos de publicidad del dispositivo para personalizar anuncios según las directrices de privacidad de Google. Puedes consultar la política de Google en <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent);">Google Privacy Policy</a>.</p>
-
-      <h3>5. Contacto</h3>
-      <p>Si tienes preguntas o sugerencias respecto a esta política de privacidad, puedes contactar al desarrollador a través de nuestro repositorio oficial en <a href="https://github.com/EmersonGt124" target="_blank" style="color: var(--accent);">GitHub @EmersonGt124</a>.</p>
-    </div>
-  </section>
+  <!-- Políticas de Privacidad (Renderizadas dinámicamente) -->
+  <section class="privacy-wrapper" id="privacy-container"></section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 NovaTech Software • Desarrollado por <a href="https://github.com/EmersonGt124" target="_blank">EmersonGt124</a>. Todos los derechos reservados.</p>
+    <p>© <span id="footer-year">2026</span> <span id="footer-studio">NovaTech Software</span> • Desarrollado por <a id="footer-github" href="https://github.com/EmersonGt124" target="_blank">EmersonGt124</a>. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Datos y Lógica del Portafolio -->
+  <script src="data/projects.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
